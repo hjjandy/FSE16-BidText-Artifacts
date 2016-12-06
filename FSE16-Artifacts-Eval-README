@@ -1,0 +1,48 @@
+1. Directories and Files
+  - Source code: BidText-Source
+  - Binaray: BidText-Bin
+  - Test Apps: BidText-TestApps
+    - Motivation : corresponding to the motivation example
+    - Propagation-3.2.2  : coresponding to the example 
+      in Section 3.2.2
+    - Result-5.3.1  : corresponding to the example described 
+      in Section 5.3.1
+    - Casestudy-5.3.2 : corresponding to the case described 
+      in Section 5.3.2
+    - Others  : corresponding to the 100 apps used to calculate 
+      false positives (Table 1)
+
+2. How to run
+  - Make sure Java 7 or 8 (amd64) has been installed and the path
+    to java is correctly set.
+  - Start a terminal
+  - Go to BidText-Bin
+  - If the user wants to change the maximum heap memory for 
+    JVM (used in option -Xmx) and the timeout setting for 
+    BidText, please modify file "bidtext.prop"
+  - Use command "RUN <APK path>" to run on arbitary APK files
+    - The results (if any) will be generated in folder 
+      "<APK path>.bidtext"
+  - For several special cases used in the paper, please use 
+    the following command directly
+    - "Motivation"  :  corresponding to the motivation example
+    - "Propagation-3.2.2"  : coresponding to the example 
+      in Section 3.2.2
+    - "Result-5.3.1"  : corresponding to the example described 
+      in Section 5.3.1
+    - "Casestudy-5.3.2" : corresponding to the case described 
+      in Section 5.3.2
+    - "Eval-100"  : corresponding to the 100 apps used to calculate 
+      false positives (Table 1)
+  - The file names of the tests may change even for the same results.
+    For example, the Casestudy-5.3.2 generates 2.HTTP.txt on Ubuntu but 
+    651.HTTP.txt on Windows.	
+  - The commands work for both Windows and Unix platforms. They have 
+    been well tested on Windows 10 and Ubuntu 14.04.
+
+3. Notes
+  - Because BidText requires a huge amount of memory to perform analysis,
+    users are expected to allocate enough memory for BidText by changing
+    MAX_JAVA_HEAP in bidtext.prop to a larger size (at least 12GB). In 
+    addition, the VM is pre-configured with a memory size of 5GB. Users 
+    should change it to a larger size.
